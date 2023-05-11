@@ -10,7 +10,13 @@
 
 <?php
 
-echo "Hello world";
+$roll;
+$price = 200.50;
+$name = "Amjad Hosssain";
+
+echo gettype($roll) . "<br>";
+echo gettype($price) . "<br>";
+echo gettype($name) . "<br>";
 
 ?>
 
