@@ -9,7 +9,7 @@
 <body>
 
 <?php
-//for loop with numeric array ###############
+//array_keys() function
 
 $number = ["Amjad"=>10,"Jabed"=>20,"Rana"=>30,"Hossain"=>'40',];
 

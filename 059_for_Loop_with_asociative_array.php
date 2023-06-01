@@ -9,7 +9,7 @@
 <body>
 
 <?php
-//for loop with numeric array ###############
+//for loop with Associative array ###############
 
 $number = ["Amjad"=>10,"Jabed"=>20,"Rana"=>30,"Hossain"=>'40',];
 
