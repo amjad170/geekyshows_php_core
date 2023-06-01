@@ -9,32 +9,7 @@
 <body>
 
 <?php
-//Multidimensional numeric array ###############
-
-$laptop = [
-    ["Rahul","Dell",10],
-    ["Sonam","HP",20],
-    ["Sumit","Lenove",30],
-];
-
-// echo "{$laptop[0][0]} {$laptop[0][1]} {$laptop[0][2]} <br>";
-// echo "{$laptop[1][0]} {$laptop[1][1]} {$laptop[1][2]} <br>";
-// echo "{$laptop[2][0]} {$laptop[2][1]} {$laptop[2][2]} <br>";
-
-foreach($laptop as $value){
-    echo "{$value[0]} {$value[1]} {$value[2]} <br>";
-}
-
-
-foreach($laptop as $values){
-    foreach($values as $value){
-        echo $value ."<br>";
-    }
-}
-
-
-echo "<br>";
-//Multidimensional Associative array ###############
+// for Loop Multidimensional Associative array ###############
 
 $runs = [
    "India"=>["Rahul"=>200,"koholi"=>300,"Dhoni"=>400],
@@ -46,13 +21,21 @@ $runs = [
 // echo "{$runs["Pakistan"]["Afridi"]} {$runs["Pakistan"]["Malek"]} {$runs["Pakistan"]["Imran"]} <br>";
 // echo "{$runs["Bangladesh"]["Moshfiq"]} {$runs["Bangladesh"]["Tamim"]} {$runs["Bangladesh"]["Riad"]} <br>";
 
-foreach($runs as $keys=>$value){
-    echo "{$keys} <br>";
-    foreach($value as $newkeys=> $newvalue){
-        echo "{$newkeys}: {$newvalue}  <br>";
+$keys = array_keys($runs);  // $keys =["India","Pakistan","Bangladesh"]
+
+
+for($i=0; $i<count($keys); $i++){
+    $keys2 = array_keys($runs[$keys[$i]]);  //$keys[0]==India==["Rahul"=>200,"koholi"=>300,"Dhoni"=>400], so $keys2 = ["Rahul","koholi","Dhoni"]
+    for($j=0; $j<count($keys2); $j++){
+        echo $runs[$keys[$i]][$keys2[$j]]." ";  // $runs[$keys[0]][$keys2[0]] == $runs["India"]["Rahul"] == 200
     }
-   echo "<br>";
+    echo "<br>";
 }
+
+
+
+
+
 
 
 
